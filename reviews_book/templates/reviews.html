@@ -4,7 +4,7 @@
 <h1>
     Книга отзывов
 </h1>
-<div>
+<div class="review_form">
     <h2>
         Оставить отзыв
     </h2>
@@ -16,23 +16,28 @@
         </p>
     </form>
 </div>
-<div>
+<div class="reviews">
     <h2>
         Все отзывы:
     </h2>
-    <p>
-        Отзыв оставил: {{name}}
-    </p>
-    <p>
-        <em>
-            {{email}}
-        </em>
-    </p>
-    <p>
-        {{review}}
-    </p>
-    <hr>
-
+    {%for review in reviews%}
+        <div class="review">
+            <p class="name">
+                Отзыв оставил: {{review.name}}
+            </p>
+            <p class="email">
+                <em>
+                    {{review.email}}
+                </em>
+            </p>
+            <p class="rate">
+                Рейтинг: {{review.rate}}
+            </p>
+            <p class="review1`">
+                {{review.Review}}
+            </p>
+        </div>
+    {%endfor%}
     
 </div>
 {%endblock content%}
