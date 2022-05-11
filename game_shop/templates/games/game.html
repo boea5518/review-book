@@ -1,0 +1,43 @@
+{%extends "base.html"%}
+{%block title%}
+Game shop
+{%endblock title%}
+{%block content%}
+<h1 class="detail-header">
+{{game.title}}
+
+</h1>
+{%if game.image%}
+<p>
+    <a href="{{game.get_absolute_url}}">
+    <img src="{{game.image.url}}" class="detail-img">
+    </a>
+</p>
+{%endif%}
+    <p class="detail-info">
+        <i>Игра добавлена пользователем {{game.owner}} {{game.created}}</i>
+    </p>
+    <p class="detail-info">
+        <i> Дата последнего обновления запипси: {{game.updated}}</i>
+    </p>
+    <h2 class="detail-header-2">
+        Описание игры:
+    </h2>
+    <p class="detail-description">
+        {{game.description}}
+    </p>
+    <h2>
+        Видео: 
+    </h2>
+    <p class="detail-tags">
+    {{game.tags}}
+    </p>
+    <p class="detail-price">
+        Цена: 
+        {{game.price}}
+    </p>
+    <p>
+        <a href="{%url 'home'%}">Вернуться на главную страницу</a>
+    </p>
+
+{%endblock content%}
