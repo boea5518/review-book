@@ -29,11 +29,11 @@ body{
     border-radius: 2px;
     padding: 2px 2px;
 }
-.login-form label{
+.login-form label,.reg-form label,.pass_change label{
     display: block;
     font-size: 20px;
 }
-.login-form input[type=submit]{
+.login-form input[type=submit],.reg-form input[type=submit],.pass_change input[type=submit]{
     font-weight: bold;
     font-size: 20px;
     border-radius: 5px;
@@ -42,7 +42,7 @@ body{
     color: black;
     width: auto;
 }
-.login-form input,textarea{
+.login-form input,textarea,.reg-form input,textarea,.pass_change  input,textarea{
     margin: 7px;
     padding: 6px 10px;
     border: 0;
@@ -51,12 +51,12 @@ body{
     background-color: rgb(197, 197, 197);
     border-radius: 5px;
 }
-.login-form input:active,:hover,:focus, textarea:active,:hover,:focus{
+.login-form input:active,:hover,:focus, textarea:active,:hover,:focus,.reg-form input:active,:hover,:focus, textarea:active,:hover,:focus,.pass_change input:active,:hover,:focus, textarea:active,:hover,:focus{
     outline: 0;
     outline-offset: 0;
 
 }
-.login{
+.login,.reg,.pass_change{
     display: inline-block;
     transform: translate(35%,50%) scale(1.2);
     overflow: hidden;
@@ -70,11 +70,15 @@ body{
 .login-logout-reg{
     text-align: right;
     float: right;
-    margin-top: 5px;
+    margin-top: -20px;
+    transform: translateY(-20px);
 }
 .login-logout-reg a{
     text-decoration: none;
     color: black;
     font-size: px;
     font-family: 'Ubuntu Mono', monospace;
+}
+.all-games{
+    margin-top: 5%;
 }

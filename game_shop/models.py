@@ -2,6 +2,7 @@ from django.db import models
 from django.forms import CharField, DateTimeField
 from django.contrib.auth import get_user_model
 from django.urls import reverse  #url-ищет по названию маршрута
+from embed_video.fields import EmbedVideoField
 
 # Create your models here.
 class Game(models.Model):
@@ -19,4 +20,5 @@ class Game(models.Model):
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
     image=models.ImageField(blank=True)
+    video = EmbedVideoField(blank=True, verbose_name='Видео')
 

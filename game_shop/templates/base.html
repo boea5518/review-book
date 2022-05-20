@@ -14,10 +14,14 @@
            
 </head>
 <body>
+    <div class="hi">
+        Добрый вечер
+    </div>
     <div class="nav">
         <h1>Game Shop</h1>
         <div class="login-logout-reg">
             {% if user.is_authenticated %}
+            <p> добрый вечер, {{user.username}}</p>
                 <a href="{% url 'logout' %}">Выйти из аккаунта</a>
             {% else %}
                 <a href="{% url 'login' %}">Войти на сайт</a>

@@ -1,0 +1,29 @@
+{%extends "base.html"%}
+{%block title%}
+Регистрация на сайт
+{%endblock title%}
+{%block content%}
+<div class="reg">
+    <h1 class="reg-heading">
+    Регистрация на сайт
+    </h1>
+    {%if form.errors%}
+        <p class="reg-para">
+            Вы ввели некоректные данные
+        </p>
+    {%else%}
+        <p class="reg-para">
+            Используйте эту форму для входа на сайт
+        </p>
+    {%endif%}
+    <div class="reg-form">
+        <form method="POST">
+            {%csrf_token%}
+            {{ form.as_p }}
+            <p>
+                <input type="submit" value="зарегистрироваться">
+            </p>
+        </form>
+    </div>
+</div>
+{%endblock content%}
